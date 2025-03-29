@@ -381,6 +381,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    blogSeo: Schema.Attribute.Component<'shared.seo', false>;
     categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::category.category'
