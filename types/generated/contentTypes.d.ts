@@ -399,7 +399,8 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         maxLength: 300;
       }>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    thumbnail: Schema.Attribute.Media<'images', true>;
+    thumbnail: Schema.Attribute.Media<'images', true> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
